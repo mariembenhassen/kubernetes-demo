@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/readyz',(req,res)=> res.status(200).send('ready'));
-app.get('/healthz',(req,res)=> res.status(200).send('healthy'));
-app.listen(PORT, () => {
+app.get('/health', (req, res) => res.status(200).send('healthy'));
+app.listen(PORT, '0.0.0.0', () =>  {
     console.log(`App is running on port ${PORT}`);
 });
